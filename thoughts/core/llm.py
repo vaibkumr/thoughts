@@ -1,10 +1,32 @@
 import google.generativeai as genai
 from ..core.config import settings
 import logging
+import re
 
 logger = logging.getLogger(__name__)
 
 genai.configure(api_key=settings.GOOGLE_API_KEY)
+
+def _extract_json(text: str) -> str:
+    """
+    Extracts a JSON object from a string that might be wrapped in markdown code fences.
+    """
+    # This regex looks for a JSON object enclosed in ```json or ```
+    # It's non-greedy to find the first complete object.
+    match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', text, re.DOTALL)
+    if match:
+        logger.info("Found JSON block with markdown fence.")
+        return match.group(1)
+
+    # If no markdown block is found, fall back to finding the first and last curly braces.
+    start = text.find('{')
+    end = text.rfind('}')
+    if start != -1 and end != -1:
+        logger.warning("Could not find markdown-fenced JSON, falling back to first/last curly brace.")
+        return text[start:end+1]
+
+    logger.error("No JSON object could be extracted from the LLM response. Returning raw text.")
+    return text
 
 def get_structured_thoughts(thoughts_data: str) -> str:
     """
@@ -28,8 +50,8 @@ def get_structured_thoughts(thoughts_data: str) -> str:
         
         logger.info(f"Raw LLM response received: {response.text}")
         
-        # Basic cleanup to get only the JSON part
-        cleaned_response = response.text.strip().replace('`json', '').replace('`', '')
+        # Use the new robust JSON extractor
+        cleaned_response = _extract_json(response.text)
 
         return cleaned_response
     except Exception:

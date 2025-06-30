@@ -1,1 +1,39 @@
-TODO Instructions
+You are given a list of natural language strings, each representing a personal thought, reflection, or internal statement. Your task is to structure this input into two components:
+
+# Classification Component
+For each string, classify its psychological and cognitive attributes using the following schema:
+
+"classification": {
+  "<input string>": {
+    "thought_content": "<one of: self-related, others-related, world-related, future-oriented, past-oriented, obsessive, delusional>",
+    "thought_valence": "<one of: negative, positive, neutral, ambivalent>",
+    "metacognition": "<one of: self-judging, thought-as-fact, reflective, suppressed, none>",
+    "category": "<reusable high-level tag, e.g., 'politics', 'technology', 'travel', 'relationships', 'finance'>"
+  }
+}
+Generate reusable categories that thematically group similar thoughts (e.g., "politics", "finance", etc) and assign one to each string under "category".
+
+# Knowledge Graph Component
+Build a graph to represent semantic and psychological relationships between the thoughts.
+
+Use this structure:
+
+"graph": {
+  "nodes": [
+    "<string1>",
+    "<string2>",
+    ...
+  ],
+  "edges": [
+    {
+      "from": "<string1>",
+      "to": "<string2>",
+      "relation": "a generated relation lable string"
+    }
+  ]
+}
+Generate and use a closed-set of edge relationships. The nodes of the graph MUST be full individual strings, not subtrings.
+
+
+# Output Format
+Your full output should be a single JSON object with two top-level keys: "classification" and "graph"
