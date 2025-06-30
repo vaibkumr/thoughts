@@ -13,7 +13,7 @@ def get_structured_thoughts(thoughts_data: str) -> str:
         return '{"title": "My Thoughts", "thoughts": [{"id": 1, "content": "This is a mock thought.", "category": "mock"}]}'
 
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         with open(settings.PROMPT_FILE, 'r') as f:
             prompt_template = f.read()
