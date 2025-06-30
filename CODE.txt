@@ -1,0 +1,8 @@
+I am writing code for a tool to capture my scattered thoughts, store them and structure them using LLMs.
+Attached is the design diagram. Write code for it in python.
+Instructions:
+1. Use poetry, create a new project and add dependencies
+2. Use gemini for the LLM calls
+3. Add typing using pydantic
+4. Optimize the client side frontend for mobile phones
+5. JSON to HTML output should be a static page not necessarily optimized for frotend
