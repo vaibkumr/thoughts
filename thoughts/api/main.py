@@ -18,7 +18,7 @@ database.create_db_and_tables()
 app = FastAPI()
 
 # Mount the static directory to serve the generated thoughts page
-app.mount("/thoughts", StaticFiles(directory=settings.STATIC_DIR), name="thoughts")
+app.mount("/static", StaticFiles(directory=settings.STATIC_DIR), name="static")
 
 # Dependency to get DB session
 def get_db():
