@@ -109,14 +109,15 @@ poetry run python -m thoughts.utils.dump_memcache
 
 
 # Memory requirement estimate
-Thoughts per day: 20
-Characters per thought: 100 words × 5 characters = 500
-Bytes per character (UTF-8 worst-case): 4
-Total days in 90 years: 365 × 90 = 32,850
-Total characters over lifetime: 20 × 500 × 32,850 = 328,500,000
-Total bytes: 328,500,000 × 4 = 1,314,000,000
-Convert to GB: 1,314,000,000 ÷ 1,073,741,824 ≈ 1.22 GB
-Total thoughts = 20 × 32,850 = 657,000 thoughts
+- Thoughts per day: 20
+- Characters per thought: 100 words × 5 characters = 500
+- Bytes per character (UTF-8 worst-case): 4
+- Total days in 90 years: 365 × 90 = 32,850
+- Total characters over lifetime: 20 × 500 × 32,850 = 328,500,000
+- Total bytes: 328,500,000 × 4 = 1,314,000,000
+- Convert to GB: 1,314,000,000 ÷ 1,073,741,824 ≈ 1.22 GB
+- Total thoughts = 20 × 32,850 = 657,000 thoughts
+
 👉 Final estimate: ~1.22 GB to store all thoughts in a 90-year lifetime
 
 

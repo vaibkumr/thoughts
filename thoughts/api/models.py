@@ -7,7 +7,7 @@ class ThoughtBase(BaseModel):
     content: str
 
 class ThoughtCreate(ThoughtBase):
-    pass
+    password: str
 
 class Thought(ThoughtBase):
     id: int

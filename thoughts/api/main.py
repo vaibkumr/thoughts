@@ -41,6 +41,9 @@ async def get_home(request: Request):
 @app.post("/submit", response_model=models.Thought)
 def submit_thought(thought: models.ThoughtCreate, db: Session = Depends(get_db), memcache_client: MemcacheClient = Depends(get_memcached_client)):
     logger.info(f"Received new thought submission: '{thought.content[:50]}...'")
+    if thought.password != settings.APP_PASSWORD:
+        logger.warning("Invalid password received with thought submission.")
+        raise HTTPException(status_code=401, detail="Invalid password")
     try:
         db_thought = models.ThoughtDB(content=thought.content)
         logger.info("Writing thought to database.")

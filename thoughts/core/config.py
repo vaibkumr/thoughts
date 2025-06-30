@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     MEMCACHED_HOST: str = "127.0.0.1"
     MEMCACHED_PORT: int = 11211
     GOOGLE_API_KEY: str
+    APP_PASSWORD: str
     STATIC_DIR: Path = Path(__file__).parent.parent.parent / "static"
     TEMPLATES_DIR: Path = Path(__file__).parent.parent.parent / "templates"
     PROMPT_FILE: Path = Path(__file__).parent.parent.parent / "instructions.txt"
