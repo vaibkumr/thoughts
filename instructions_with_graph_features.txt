@@ -6,7 +6,7 @@ For each string, classify its psychological and cognitive attributes using the f
 "classification": {
   "<input string>": {
     "thought_content": "<one of: self-related, others-related, world-related, future-oriented, past-oriented, obsessive, delusional>",
-    "thought_valence": "<one of: negative, positive, neutral, ambivalent>",
+    "sentiment": "<one of: negative, positive, neutral, ambivalent>",
     "metacognition": "<one of: self-judging, thought-as-fact, reflective, suppressed, none>",
     "category": "<reusable high-level tag, e.g., 'politics', 'technology', 'travel', 'relationships', 'finance'>"
   }

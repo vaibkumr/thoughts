@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="feed">
+    <h2>{{ title }}</h2>
+    <div class="thoughts-container">
+        {% for thought in thoughts %}
+        <div class="thought-card">
+            <p class="thought-content">"{{ thought.content }}"</p>
+            <div class="thought-meta">
+                <span><strong>Category:</strong> {{ thought.category | default('N/A') }}</span>
+                <span><strong>Sentiment:</strong> <span class="sentiment sentiment-{{ thought.sentiment | lower }}">{{
+                        thought.sentiment | default('N/A') }}</span></span>
+            </div>
+        </div>
+        {% else %}
+        <p>No thoughts to display.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

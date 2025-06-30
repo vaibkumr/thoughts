@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block content %}
+<section id="sentiment-analysis">
+    <h2>{{ title }}</h2>
+    <div class="chart-container">
+        <canvas id="sentimentChart"></canvas>
+    </div>
+</section>
+
+<script>
+    const ctx = document.getElementById('sentimentChart').getContext('2d');
+    const chartData = {{ chart_data | safe }};
+
+    new Chart(ctx, {
+        type: 'line',
+        data: chartData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    ticks: {
+                        callback: function (value, index, values) {
+                            if (value === 1) return 'Positive';
+                            if (value === 0) return 'Neutral';
+                            if (value === -1) return 'Negative';
+                            return null;
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

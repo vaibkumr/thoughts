@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="categories">
+    <h2>{{ title }}</h2>
+    {% for category, thoughts in categories.items() %}
+    <div class="category-group">
+        <h3>{{ category }}</h3>
+        <div class="thoughts-container">
+            {% for thought in thoughts %}
+            <div class="thought-card">
+                <p class="thought-content">"{{ thought.content }}"</p>
+                <div class="thought-meta">
+                    <span><strong>Sentiment:</strong> <span
+                            class="sentiment sentiment-{{ thought.sentiment | lower }}">{{ thought.sentiment |
+                            default('N/A') }}</span></span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <p>No categories to display.</p>
+    {% endfor %}
+</section>
+{% endblock %}

@@ -100,6 +100,11 @@ You can also dump the entire contents of the Memcached server to see what's curr
 poetry run python -m thoughts.utils.dump_memcache
 ```
 
+### Generate TestDB
+```bash
+`poetry run python thoughts/utils/generate_test_db.py`
+```
+
 ![](assets/design.png)
 
 
@@ -115,6 +120,8 @@ Total thoughts = 20 × 32,850 = 657,000 thoughts
 👉 Final estimate: ~1.22 GB to store all thoughts in a 90-year lifetime
 
 
+
+657,000 * 657,000 * 40 * 20 * 5
 
 
 
