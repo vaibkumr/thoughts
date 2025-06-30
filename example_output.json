@@ -1,0 +1,328 @@
+{
+    "classification": {
+        "What is one thing I could do today to make tomorrow better?": {
+            "thought_content": "future-oriented",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "Am I using my time wisely?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "self-improvement"
+        },
+        "What am I avoiding that I know I need to do?": {
+            "thought_content": "self-related",
+            "thought_valence": "negative",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "Is this aligned with my long-term goals?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What is a recent failure I can learn from?": {
+            "thought_content": "past-oriented",
+            "thought_valence": "neutral",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I be more present in my daily life?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What is something I'm grateful for right now?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "Am I taking care of my physical and mental health?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "health"
+        },
+        "What would my ideal self do in this situation?": {
+            "thought_content": "self-related",
+            "thought_valence": "neutral",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What is a limiting belief I'm holding onto?": {
+            "thought_content": "self-related",
+            "thought_valence": "negative",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I step out of my comfort zone this week?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What relationship in my life needs more of my attention?": {
+            "thought_content": "others-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "reflective",
+            "category": "relationships"
+        },
+        "Am I holding onto any resentment that I need to let go of?": {
+            "thought_content": "self-related",
+            "thought_valence": "negative",
+            "metacognition": "self-judging",
+            "category": "relationships"
+        },
+        "What is a skill I want to develop?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I contribute to my community or the world in a meaningful way?": {
+            "thought_content": "world-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "community"
+        },
+        "What is a book I should read that could change my perspective?": {
+            "thought_content": "world-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "learning"
+        },
+        "Am I living authentically?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "self-improvement"
+        },
+        "What is one small thing I can do to bring joy to someone else today?": {
+            "thought_content": "others-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "relationships"
+        },
+        "What does success look like to me, and am I on the right path?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I be more compassionate towards myself and others?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What is a fear that is holding me back?": {
+            "thought_content": "self-related",
+            "thought_valence": "negative",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "Am I communicating my needs effectively in my relationships?": {
+            "thought_content": "others-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "relationships"
+        },
+        "What is something I have been procrastinating on and why?": {
+            "thought_content": "self-related",
+            "thought_valence": "negative",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What are my top 3 priorities right now?": {
+            "thought_content": "self-related",
+            "thought_valence": "neutral",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I simplify my life?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What is a passion I've been neglecting?": {
+            "thought_content": "self-related",
+            "thought_valence": "negative",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "Am I open to new ideas and perspectives?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "self-improvement"
+        },
+        "What is one positive habit I want to cultivate?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How do I want to be remembered?": {
+            "thought_content": "self-related",
+            "thought_valence": "neutral",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What is a difficult conversation I need to have?": {
+            "thought_content": "others-related",
+            "thought_valence": "negative",
+            "metacognition": "reflective",
+            "category": "relationships"
+        },
+        "Am I spending enough time in nature?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "health"
+        },
+        "What is something that energizes me?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I be a better listener?": {
+            "thought_content": "others-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "relationships"
+        },
+        "What is a boundary I need to set?": {
+            "thought_content": "self-related",
+            "thought_valence": "neutral",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "Am I celebrating my small wins?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "self-improvement"
+        },
+        "What is a mistake I keep repeating?": {
+            "thought_content": "self-related",
+            "thought_valence": "negative",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I practice more self-discipline?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What does my ideal day look like, and how can I make it a reality?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "Am I learning from my past, or am I defined by it?": {
+            "thought_content": "past-oriented",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "self-improvement"
+        },
+        "What is something I can do to reduce my stress levels?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "health"
+        },
+        "How can I be more creative in my work or personal life?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What is a piece of advice I would give to my younger self?": {
+            "thought_content": "self-related",
+            "thought_valence": "neutral",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "Am I taking on too much responsibility?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "self-improvement"
+        },
+        "What is a quality I admire in others that I want to cultivate in myself?": {
+            "thought_content": "others-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I be more mindful of my impact on the environment?": {
+            "thought_content": "world-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "environment"
+        },
+        "What is a project I'm excited about?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "work"
+        },
+        "Am I challenging my own assumptions?": {
+            "thought_content": "self-related",
+            "thought_valence": "ambivalent",
+            "metacognition": "self-judging",
+            "category": "self-improvement"
+        },
+        "What is something I'm proud of, but rarely acknowledge?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "How can I be more patient with myself and the process?": {
+            "thought_content": "self-related",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "What is one step I can take today towards a long-term dream?": {
+            "thought_content": "future-oriented",
+            "thought_valence": "positive",
+            "metacognition": "reflective",
+            "category": "self-improvement"
+        },
+        "without ideologies, you are lost. They are the guiding light in the face of dark.": {
+            "thought_content": "world-related",
+            "thought_valence": "negative",
+            "metacognition": "thought-as-fact",
+            "category": "philosophy"
+        },
+        "I felt kind of hot when I woke up today, I think I should turn on the fan before I go to sleep.": {
+            "thought_content": "self-related",
+            "thought_valence": "neutral",
+            "metacognition": "none",
+            "category": "health"
+        },
+        "I felt hot today morning when I woke up, I should turn on the fan before I sleep tonight.": {
+            "thought_content": "self-related",
+            "thought_valence": "neutral",
+            "metacognition": "none",
+            "category": "health"
+        },
+        "I felt hot today morning when I woke up, I should turn on the fan before I sleep tonight.": {
+            "thought_content": "self-related",
+            "thought_valence": "neutral",
+            "metacognition": "none",
+            "category": "health"
+        }
+    }
+}

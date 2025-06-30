@@ -42,7 +42,7 @@ async def get_home(request: Request):
 def submit_thought(thought: models.ThoughtCreate, db: Session = Depends(get_db), memcache_client: MemcacheClient = Depends(get_memcached_client)):
     logger.info(f"Received new thought submission: '{thought.content[:50]}...'")
     try:
-        db_thought = database.Thought(content=thought.content)
+        db_thought = models.ThoughtDB(content=thought.content)
         logger.info("Writing thought to database.")
         db.add(db_thought)
         db.commit()

@@ -5,7 +5,8 @@ from jinja2 import Environment, FileSystemLoader
 from pymemcache.client.base import Client as MemcacheClient
 
 from ..core.config import settings
-from ..api.database import SessionLocal, Thought
+from ..api.models import ThoughtDB
+from ..api.database import SessionLocal
 from ..core.llm import get_structured_thoughts
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -18,7 +19,7 @@ def process_thoughts():
     db = SessionLocal()
     try:
         logger.info("Reading all thoughts from database.")
-        thoughts = db.query(Thought).all()
+        thoughts = db.query(ThoughtDB).all()
         logger.info(f"Found {len(thoughts)} thoughts to process.")
         if not thoughts:
             return
