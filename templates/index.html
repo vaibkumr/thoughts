@@ -9,6 +9,8 @@
             <p class="thought-content">"{{ thought.content }}"</p>
             <div class="thought-meta">
                 <span><strong>Category:</strong> {{ thought.category | default('N/A') }}</span>
+                <span class="timestamp">{{ thought.created_at.strftime('%Y-%m-%d') if thought.created_at else 'No Date'
+                    }}</span>
                 <span><strong>Sentiment:</strong> <span class="sentiment sentiment-{{ thought.sentiment | lower }}">{{
                         thought.sentiment | default('N/A') }}</span></span>
             </div>

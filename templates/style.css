@@ -1,31 +1,47 @@
 :root {
-    --primary-color: #333;
-    --secondary-color: #f4f4f4;
-    --accent-color: #007bff;
-    --positive-color: #28a745;
-    --negative-color: #dc3545;
-    --neutral-color: #6c757d;
-    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Solarized Light */
+    --base03: #002b36;
+    --base02: #073642;
+    --base01: #586e75;
+    --base00: #657b83;
+    --base0: #839496;
+    --base1: #93a1a1;
+    --base2: #eee8d5;
+    --base3: #fdf6e3;
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+    --font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+    --body-font-family: "Georgia", "Times New Roman", serif;
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--body-font-family);
     line-height: 1.6;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    margin: 0;
-    padding: 0;
+    background-color: var(--base3);
+    color: var(--base00);
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 80ch;
 }
 
 header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+    background-color: var(--base2);
+    border-bottom: 1px solid var(--base1);
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 header h1 {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
     margin: 0;
+    color: var(--base01);
 }
 
 nav {
@@ -33,73 +49,81 @@ nav {
 }
 
 nav a {
-    color: white;
+    font-family: var(--font-family);
+    color: var(--blue);
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 3px;
 }
 
 nav a:hover,
 nav a.active {
-    background-color: var(--accent-color);
+    background-color: var(--base2);
+    color: var(--orange);
 }
 
 main {
-    padding: 1rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 0;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     margin-top: 2rem;
     font-size: 0.8rem;
-    color: #666;
+    color: var(--base1);
+    border-top: 1px solid var(--base2);
 }
 
 .thoughts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .thought-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background-color: var(--base2);
+    border-left: 5px solid var(--base1);
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
 }
 
 .thought-content {
-    font-style: italic;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 .thought-meta {
-    font-size: 0.9rem;
+    font-family: var(--font-family);
+    font-size: 0.85rem;
     display: flex;
     justify-content: space-between;
-    color: #555;
+    color: var(--base01);
+}
+
+.thought-meta .category,
+.thought-meta .timestamp {
+    background-color: var(--base3);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
 }
 
 .sentiment-positive {
-    color: var(--positive-color);
+    color: var(--green);
     font-weight: bold;
 }
 
 .sentiment-negative {
-    color: var(--negative-color);
+    color: var(--red);
     font-weight: bold;
 }
 
 .sentiment-neutral,
 .sentiment-ambivalent {
-    color: var(--neutral-color);
-    font-weight: bold;
+    color: var(--base01);
+    font-weight: normal;
 }
 
 .category-group {
@@ -107,28 +131,23 @@ footer {
 }
 
 .category-group h3 {
-    border-bottom: 2px solid var(--accent-color);
+    font-family: var(--font-family);
+    color: var(--base01);
+    border-bottom: 2px solid var(--base2);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
 
 .chart-container {
-    position: relative;
-    height: 60vh;
-    background-color: white;
+    background-color: var(--base2);
     padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    border: 1px solid var(--base1);
 }
 
-/* Responsive */
 @media (max-width: 600px) {
-    main {
-        padding: 1rem;
-    }
-
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
+    body {
+        max-width: 100%;
+        padding: 0.5rem;
     }
 }
