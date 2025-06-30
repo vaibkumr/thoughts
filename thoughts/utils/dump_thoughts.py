@@ -2,6 +2,7 @@ import argparse
 import json
 import sys
 from typing import Optional
+import logging
 
 # Add the project root to the Python path to allow imports from other packages
 import os
@@ -11,13 +12,19 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 from sqlalchemy.orm import Session
 from thoughts.api.database import SessionLocal, Thought
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
 def dump_thoughts(output_file: Optional[str] = None):
     """
     Dumps all thoughts from the database to stdout or a file in JSON format.
     """
+    logger.info("Starting thought dump process.")
     db = SessionLocal()
     try:
+        logger.info("Querying all thoughts from the database.")
         thoughts = db.query(Thought).order_by(Thought.timestamp).all()
+        logger.info(f"Found {len(thoughts)} thoughts.")
         
         thoughts_list = [
             {
@@ -29,14 +36,19 @@ def dump_thoughts(output_file: Optional[str] = None):
         ]
         
         if output_file:
+            logger.info(f"Writing dump to file: {output_file}")
             with open(output_file, 'w') as f:
                 json.dump(thoughts_list, f, indent=4)
-            print(f"Successfully dumped {len(thoughts_list)} thoughts to {output_file}", file=sys.stderr)
+            logger.info(f"Successfully dumped {len(thoughts_list)} thoughts to {output_file}")
         else:
+            logger.info("Writing dump to stdout.")
             json.dump(thoughts_list, sys.stdout, indent=4)
             
+    except Exception:
+        logger.error("An error occurred during thought dump.", exc_info=True)
     finally:
         db.close()
+        logger.info("Database session closed.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
